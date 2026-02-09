@@ -1,0 +1,155 @@
+/* --- RESET & BASICS --- */
+    * { margin: 0; padding: 0; 
+      box-sizing: border-box; 
+      font-family: 'Inter', sans-serif; }
+    body { background: #000000; 
+      color: #ffffff; 
+      overflow-x: hidden; }
+
+/* --- NAVBAR --- */
+    nav {
+      position: fixed; 
+      top: 0; 
+      width: 100%; 
+      padding: 20px 40px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      z-index: 100;
+      background: rgba(15,15,15,0); 
+      backdrop-filter: blur(10px);
+    }
+    .nav-logo {
+      font-size: 1rem; 
+      font-weight: 700; 
+      text-decoration: none; 
+      color: #fff; 
+      opacity: 0;
+    }
+    .nav-links { opacity: 0; }
+    nav a.link {
+      color: #aaa; 
+      text-decoration: none; 
+      margin-left: 24px; 
+      font-weight: 500; 
+      transition: color 0.3s;
+    }
+    nav a.link:hover { color: #fff; }
+
+/* --- FIXED 3D CONTAINER (RIGHT SIDE) --- */
+    #canvas-container {
+        position: fixed; /* Locks it to the screen */
+        top: 0;
+        right: 0;
+        width: 50vw; /* Takes exactly half the width */
+        height: 100vh;
+        z-index: 1; /* Sits behind the navbar but parallel to content */
+        opacity: 0; /* Animated in via JS */
+    }
+
+/* --- SCROLLABLE CONTENT (LEFT SIDE) --- */
+section {
+  width: 50vw;
+
+  min-height: auto; /* Remove fullscreen height */
+
+  padding: 50px 5vw; /* Reduce padding */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Top aligned */
+
+  position: relative;
+  z-index: 2;
+
+  background: transparent;
+}
+
+/* Hero section only - full height */
+#hero {
+  min-height: 100vh;
+  justify-content: center;
+  padding: 120px 5vw;
+}
+
+/* --- TYPOGRAPHY & CARDS --- */
+    #hero h1 {
+      font-size: clamp(3rem, 5vw, 5rem); 
+      font-weight: 700; 
+      line-height: 1.1; 
+      opacity: 0;
+    }
+    #hero p {
+      font-size: 1.2rem; 
+      color: #aaa; 
+      margin-top: 20px; 
+      max-width: 90%; 
+      opacity: 0;
+    }
+    .section-title { font-size: 3rem; margin-bottom: 40px; }
+    
+    footer {
+    width: 100%;        /* Spans the full width of the screen */
+    text-align: center; /* Centers the text */
+    padding: 40px;
+    color: #777;
+    
+    /* Crucial: Ensures the footer sits ON TOP of the 3D model */
+    position: relative; 
+    z-index: 10; 
+    }
+
+/* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 900px) {
+        /* Reset to stack vertically */
+        section { width: 100%; padding: 100px 5vw; }
+        footer { width: 100%; }
+        
+        /* Move 3D model to top and un-fix it */
+        #canvas-container {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            margin-top: 80px; /* Space for navbar */
+        }
+        /* Make sure Hero text comes after the model on mobile */
+        #hero { min-height: 50vh; justify-content: flex-start; }
+    }
+
+    /* Resume Buttons */
+
+.resume-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.resume-btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Download Button */
+.resume-btn.primary {
+  background: #fff;
+  color: #000;
+}
+
+.resume-btn.primary:hover {
+  background: #ddd;
+}
+
+/* Preview Button */
+.resume-btn.secondary {
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.resume-btn.secondary:hover {
+  background: #fff;
+  color: #000;
+}

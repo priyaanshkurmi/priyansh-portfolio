@@ -1,0 +1,83 @@
+/* --- INTRO OVERLAY --- */
+    #intro {
+      position: fixed; 
+      inset: 0; 
+      background: #0f0f0f;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      z-index: 10000;
+    }
+    
+    .intro-text {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 700;
+    color: #fff;
+    transform-origin: center center;
+    white-space: nowrap;
+    position: absolute;
+
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+    }
+
+/* --- PROFESSIONAL TOOLTIP --- */
+#skill-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    padding: 16px 18px;
+
+    background: #ffffff; /* Clean white */
+    color: #0f172a;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    pointer-events: none;
+    opacity: 0;
+
+    transform: translateY(6px) scale(0.98);
+    transition: 
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+    z-index: 1000;
+}
+
+/* Show */
+#skill-tooltip.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Title */
+#tooltip-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #020617;
+
+    margin-bottom: 6px;
+}
+
+/* Description */
+#tooltip-desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #475569;
+}
