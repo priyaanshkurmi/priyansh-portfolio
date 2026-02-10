@@ -89,14 +89,28 @@ section {
     .section-title { font-size: 3rem; margin-bottom: 40px; }
     
     footer {
-    width: 100%;        /* Spans the full width of the screen */
-    text-align: center; /* Centers the text */
-    padding: 40px;
-    color: #777;
-    
-    /* Crucial: Ensures the footer sits ON TOP of the 3D model */
-    position: relative; 
-    z-index: 10; 
+      width: 100%;
+      text-align: center;
+      padding: 10px 10px;
+      color: #777;
+      background: rgba(15,15,15,0.6);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255,255,255,0.1);
+
+      position: relative;
+      z-index: 10;
+
+      /* Animation start state */
+      opacity: 0;
+      transform: translateY(40px);
+
+      transition: all 0.8s ease;
+    }
+
+    /* When visible */
+    footer.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
 /* --- MOBILE RESPONSIVENESS --- */

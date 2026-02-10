@@ -133,4 +133,19 @@
 
         if(socialContainer) socialObserver.observe(socialContainer);
     };
-  
+
+    const footer = document.querySelector("footer");
+
+    const footerObserver = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            footer.classList.add("show");
+        }
+        });
+    },
+    { threshold: 0.3 }
+    );
+
+    footerObserver.observe(footer);
+    
