@@ -207,6 +207,13 @@
   transition: all 0.35s ease;
 }
 
+.project-card.featured {
+  border-color: rgba(255,255,255,0.35);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.95),
+    0 0 40px rgba(255,255,255,0.08);
+}
+
 /* Frame Effect */
 
 .project-card::before {
