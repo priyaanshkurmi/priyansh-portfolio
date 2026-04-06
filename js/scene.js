@@ -1,5 +1,6 @@
 // --- THREE.JS LOGIC ---
     function initThreeJS() {
+     try {
     const container = document.getElementById('canvas-container');
     
     // --- 0. TOOLTIP ELEMENTS & DATA ---
@@ -29,7 +30,7 @@
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio); 
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Cap at 2 for performance
     container.appendChild(renderer.domElement);
 
     // --- GROUPING STRATEGY (FIXED FOR ROTATION) ---
@@ -237,4 +238,10 @@
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
     });
+} catch (error) {
+    console.warn('Three.js initialization failed:', error);
+    // Hide the canvas container if WebGL fails
+    const container = document.getElementById('canvas-container');
+    if (container) container.style.display = 'none';
+}
 }

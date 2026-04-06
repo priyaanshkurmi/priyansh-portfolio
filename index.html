@@ -5,7 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Priyansh | Portfolio</title>
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+  <meta property="og:title" content="Priyansh Patel | Full Stack Developer">
+  <meta property="og:description" content="Python, Django, Odoo ERP Developer building modern web applications.">
+  <meta property="og:image" content="assets/preview.png">
+  <meta property="og:url" content="https://priyaanshkurmi.github.io/priyansh-portfolio/">
+  <meta property="og:type" content="website">
+
+  <meta http-equiv="Content-Security-Policy"
+    content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    ">
   <meta name="description" content="Priyansh Patel - Full Stack Developer specializing in Python, Django, Odoo ERP, and modern web applications.">
   <meta name="keywords" content="Priyansh Patel, Full Stack Developer, Python Developer, Django, Odoo, ERP, Web Developer, Bhopal, India">
   <meta name="author" content="Priyansh Patel">
@@ -16,11 +30,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-  
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
@@ -44,11 +57,21 @@
   <nav>
     <a href="#hero" class="nav-logo">Priyansh Patel 🧑🏽‍💻</a>
     <div class="nav-links">
-      <a href="#hero" class="link">Home🏡</a>
-      <a href="#education" class="link">Education👨🏽‍🎓</a>
-      <a href="#projects" class="link">Projects🧩</a>
-      <a href="#skills" class="link">Skills🎯</a>
-      <a href="#contact" class="link">Contact📞</a>
+      <a href="#hero" class="link">
+        Home <span aria-hidden="true">🏡</span>
+      </a>
+      <a href="#education" class="link">
+        Education <span aria-hidden="true">👨🏽‍🎓</span>
+      </a>
+      <a href="#projects" class="link">
+        Projects <span aria-hidden="true">🧩</span>
+      </a>
+      <a href="#skills" class="link">
+        Skills <span aria-hidden="true">🎯</span>
+      </a>
+      <a href="#contact" class="link">
+        Contact <span aria-hidden="true">📞</span>
+      </a>
     </div>
   </nav>
 
@@ -56,69 +79,95 @@
 
   <section id="hero">
     <h1 class="hero-title">Full-Stack<br>Software Developer</h1>
-    <p class="hero-sub">I build smooth, animated, and modern web experiences.</p>
+    <p class="hero-sub">Building scalable web applications using Python, Django, and modern web technologies.</p>
   </section>
 
   <section id="education">
     <h2 class="section-title">Education</h2>
-    <p>Bechelor's of Computer Applications (BCA) from Barkatullah University, Bhopal, Madhya Pradesh</p>
+    <p>Bachelor's of Computer Applications (BCA) from Barkatullah University, Bhopal, Madhya Pradesh</p>
   </section>
 
   <section id="projects">
-  <h2 class="section-title">Projects & Experience</h2>
+    <h2 class="section-title">Projects & Experience</h2>
 
-  <div class="projects">
+    <div class="projects">
 
-    <!-- Portfolio Website -->
-    <a
-      href="https://github.com/priyaanshkurmi/priyansh-portfolio"
-      target="_blank"
-      rel="noopener"
-      class="card project-card"
-    >
-      <h3>Personal Portfolio Website</h3>
+      <!-- Ecommerce Django Project -->
+      <a
+        href="https://github.com/priyaanshkurmi/e-commerce-backend.git"
+        target="_blank"
+        rel="noopener"
+        class="card project-card"
+      >
+        <h3>Ecommerce Django Platform</h3>
 
-      <p>
-        Designed and developed a modern interactive portfolio using
-        Three.js, Anime.js, and responsive UI principles to showcase
-        technical skills and projects.
-      </p>
+        <p>
+          Developed a full-featured e-commerce web application using
+          Django with user authentication, cart management, Razorpay
+          payment integration, order tracking, invoice generation, and
+          email notifications. Designed for a professional shopping UX.
+        </p>
 
-      <div class="project-meta">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Three.js</span>
-        <span>Anime.js</span>
-      </div>
-    </a>
+        <div class="project-meta">
+          <span>Django</span>
+          <span>Python</span>
+          <span>PostgreSQL</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Razorpay</span>
+        </div>
+      </a>
 
-    <!-- Odoo Experience -->
-    <a
-      href="https://github.com/priyaanshkurmi/odoo_erp_work"
-      target="_blank"
-      rel="noopener"
-      class="card project-card"
-    >
-      <h3>Odoo ERP Development & Customization</h3>
+      <!-- Portfolio Website -->
+      <a
+        href="https://github.com/priyaanshkurmi/priyansh-portfolio"
+        target="_blank"
+        rel="noopener"
+        class="card project-card"
+      >
+        <h3>Personal Portfolio Website</h3>
 
-      <p>
-        Worked on ERP module development, workflow automation,
-        third-party API integration, and customization for business
-        operations using Odoo Community Edition.
-      </p>
+        <p>
+          Designed and developed a modern interactive portfolio using
+          Three.js, Anime.js, and responsive UI principles to showcase
+          technical skills and projects.
+        </p>
 
-      <div class="project-meta">
-        <span>Odoo</span>
-        <span>Python</span>
-        <span>PostgreSQL</span>
-        <span>REST API</span>
-        <span>Docker</span>
-      </div>
-    </a>
+        <div class="project-meta">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Three.js</span>
+          <span>Anime.js</span>
+        </div>
+      </a>
 
-  </div>
-</section>
+      <!-- Odoo Experience -->
+      <a
+        href="https://github.com/priyaanshkurmi/odoo_erp_work"
+        target="_blank"
+        rel="noopener"
+        class="card project-card"
+      >
+        <h3>Odoo ERP Development & Customization</h3>
+
+        <p>
+          Worked on ERP module development, workflow automation,
+          third-party API integration, and customization for business
+          operations using Odoo Community Edition.
+        </p>
+
+        <div class="project-meta">
+          <span>Odoo</span>
+          <span>Python</span>
+          <span>PostgreSQL</span>
+          <span>REST API</span>
+          <span>Docker</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
 
   <section id="skills" class="skills-section">
 
@@ -127,8 +176,7 @@
   <p class="skills-subtitle">
     Technologies I use to design, build, and deploy scalable systems.
   </p>
-
-  <div class="skills-grid">
+    <div class="skills-grid">
 
     <div class="skill-group">
       <h3>Programming</h3>
@@ -145,6 +193,7 @@
         <span data-skill="odoo">Odoo ERP</span>
       </div>
     </div>
+
 
     <div class="skill-group">
       <h3>Database</h3>
